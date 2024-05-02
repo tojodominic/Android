@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clickable="true"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:elevation="90dp"
+    android:padding="15dp"
+    android:background="@drawable/gradwifiport">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" IP address :  "
+            android:textColor="#544949"
+            android:textSize="14dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ipItemWifi"
+            android:textSize="15dp"
+            android:textColor="#050505"/>
+    </LinearLayout>
+
+</LinearLayout>

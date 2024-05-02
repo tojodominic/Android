@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "991646784940",
+    "project_id": "android-c46fd",
+    "storage_bucket": "android-c46fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991646784940:android:254230b06e290354acae09",
+        "android_client_info": {
+          "package_name": "com.tojo.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2VBhZobebopberAbrFj1yE_-6zDM1Ai0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
