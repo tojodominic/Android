@@ -107,7 +107,21 @@
                 android:textColor="#0C84E4"
                 style="?attr/materialButtonOutlinedStyle" />
 
+            <Button
+                android:id="@+id/OtherModuleHomeUI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="  Password Strength Analyzer"
+                app:icon="@drawable/scn"
+                app:iconSize="25dp"
+                android:textColor="#0C84E4"
+                style="?attr/materialButtonOutlinedStyle" />
+
             </LinearLayout>
+
+
+
 
         <Button
             android:id="@+id/saveHomeUI"

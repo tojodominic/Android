@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DirectoryView"
+    tools:context=".ViewWifiPort"
     android:background="#EAE4E4">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerviewDirectoryView"/>
+        android:id="@+id/recyclerviewPortList"/>
 
 </LinearLayout>

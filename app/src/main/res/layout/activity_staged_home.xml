@@ -1,9 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StagedHome">
+    tools:context=".StagedHome"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#EAE4E4"
+    android:padding="25dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+
+        <Button
+            android:id="@+id/logoutStagedHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="LogOut "
+            app:icon="@drawable/logout"
+            app:iconSize="25dp"
+            android:textColor="#0C84E4"
+            style="?attr/materialButtonOutlinedStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#EAE4E4"
+        android:padding="25dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:layout_height="wrap_content"
+                android:hint="Target"
+                android:paddingBottom="10dp"
+                app:hintTextColor="#050505"
+                app:boxStrokeColor="#465FEE"
+                android:textColorHint="#324CE0"
+                app:helperTextEnabled="true"
+                app:helperText="Domain Name or Host IP"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/targetStagedHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0C84E4"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/addStagedHome"
+                style="?attr/materialButtonOutlinedStyle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="100dp">
+
+            <Button
+                android:id="@+id/stagedScanStagedHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="  Staged Scan"
+                app:icon="@drawable/normal1"
+                app:iconSize="25dp"
+                android:textColor="#0C84E4"
+                style="?attr/materialButtonOutlinedStyle" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="25dp"
+            android:padding="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/normalScanStagedHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="  Normal Scan"
+                app:icon="@drawable/staged1"
+                app:iconSize="25dp"
+                android:textColor="#0C84E4"
+                style="?attr/materialButtonOutlinedStyle" />
+            <Button
+                android:id="@+id/wifiScanStagedHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="  Internal Network Scanner"
+                app:icon="@drawable/scn"
+                app:iconSize="25dp"
+                android:textColor="#0C84E4"
+                style="?attr/materialButtonOutlinedStyle" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/saveStagedHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="  Saved Results"
+            app:icon="@drawable/storage"
+            app:iconSize="25dp"
+            android:textColor="#0C84E4"
+            style="?attr/materialButtonOutlinedStyle" />
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarStagedHome" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textviewStagedHome"/>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

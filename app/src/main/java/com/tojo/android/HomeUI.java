@@ -35,7 +35,7 @@ import java.util.Map;
 public class HomeUI extends AppCompatActivity {
 
 
-    Button btnSaved,btnNormal,btnStaged,btnWifi,btnLogout;
+    Button btnSaved,btnNormal,btnStaged,btnWifi,btnLogout,btnPassword;
     EditText edTarget;
     TextView txt;
     ProgressBar mProgressbar;
@@ -78,6 +78,7 @@ public class HomeUI extends AppCompatActivity {
         btnNormal = (Button) findViewById(R.id.normalScanHomeUI);
         btnStaged = (Button) findViewById(R.id.stagedScanHomeUI);
         btnWifi = (Button) findViewById(R.id.wifiScanHomeUI);
+        btnPassword = (Button) findViewById(R.id.OtherModuleHomeUI);
         btnLogout = (Button) findViewById(R.id.logoutHomeUI);
         mProgressbar = (ProgressBar) findViewById(R.id.progressBarHomeUi);
         mProgressbar.setVisibility(View.INVISIBLE);
@@ -92,6 +93,13 @@ public class HomeUI extends AppCompatActivity {
 //        }else{
 //            Toast.makeText(getApplicationContext(),"Null Data",Toast.LENGTH_LONG).show();
 //        }
+
+        btnPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),PasswordStrength.class));
+            }
+        });
 
         btnSaved.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,7 +142,8 @@ public class HomeUI extends AppCompatActivity {
                 DateFormat df= new SimpleDateFormat("MMM-dd-yyyy HH-mm-ss");
                 Date dateobj = new Date();
                 String tim = df.format(dateobj);
-                String refName = ref+" - "+tim;
+                //String refName = ref+" - "+tim;
+                String refName = tim;
 
                 //Making the Initial reference for first entry to DB...
                 reference= FirebaseDatabase.getInstance().getReference().child("Data").child("ScanResult").child(phone).child(refName);

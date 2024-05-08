@@ -6,7 +6,7 @@ def PortEnum(host):
 
 
     ObjPortScn.thread_list=[]
-    for t in range(100):
+    for t in range(50):
         thread=threading.Thread(target=ObjPortScn.scanport)
         ObjPortScn.thread_list.append(thread)
     for thread in ObjPortScn.thread_list:
@@ -23,8 +23,6 @@ def serviceEnum(port):
     except OSError:
         return ""
 
-# def bannerEnum(port):
-#     return "Port-Banner"
 
 def bannerEnum(domain,port):
     if port in [53,80,6980,443]:
@@ -60,6 +58,4 @@ def main(portList):
             ports.append(det)
         hostOp["ports"]=ports
         output.append(hostOp)
-
-
     return output

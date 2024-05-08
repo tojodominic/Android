@@ -11,13 +11,14 @@ class PortTCP:
             port = self.ports.pop(0)
             try:
                 sock=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-                sock.settimeout(1)
+                sock.settimeout(2)
                 sock.connect((self.target,port))
                 sock.close()
                 self.discovered_ports.append(port)
             except:
                 # if the subdomain does not exist, just pass, print nothing
                 pass
-            else:
-                #self.discovered_subdomains.append(fullname)
+            finally:
+                # Close the socket
+                sock.close()
                 pass
