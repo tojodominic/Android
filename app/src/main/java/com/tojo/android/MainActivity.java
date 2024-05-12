@@ -31,24 +31,31 @@ public class MainActivity extends AppCompatActivity {
 //
 //        Toast.makeText(getApplicationContext(),pyObject.toString(),Toast.LENGTH_LONG).show();
 
+        preferences=getSharedPreferences("LOGIN",MODE_PRIVATE);
+        String priv = preferences.getString("Privacy",null);
+        if (priv!=null){
+            setContentView(R.layout.activity_main);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+//                    preferences=getSharedPreferences("LOGIN",MODE_PRIVATE);
+                    String phone=preferences.getString("mobile",null);
 
-        setContentView(R.layout.activity_main);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                preferences=getSharedPreferences("LOGIN",MODE_PRIVATE);
-                String phone=preferences.getString("mobile",null);
+                    if(phone!=null){
+                        startActivity(new Intent(getApplicationContext(),HomeUI.class));
+                        finish();
+                    }else{
+                        startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                        finish();
+                    }
 
-                if(phone!=null){
-                    startActivity(new Intent(getApplicationContext(),HomeUI.class));
-                    finish();
-                }else{
-                    startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-                    finish();
                 }
+            },SPLASH);
+        }else{
+            startActivity(new Intent(getApplicationContext(), Privacy.class));
+        }
 
-            }
-        },SPLASH);
+
 
     }
 }

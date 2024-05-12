@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Privacy"
+    android:background="#EAE4E4"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="28dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingBottom="10dp"
+        android:text="This application is intended for educational and testing purposes only. By using this application, you agree to the following:"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. This application is designed for automating penetration testing tasks. It is not intended for any illegal or unauthorized activities."/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. The app and its developer do not assume any responsibility for the misuse or unlawful use of this application. Users are solely responsible for ensuring that their actions comply with applicable laws and regulations."/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. Users are responsible for obtaining proper authorization before conducting any penetration testing activities on networks or systems that they do not own or have explicit permission to test."/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. Users are expected to use this application ethically and responsibly, respecting the privacy and rights of others at all times."/>
+    <CheckBox
+        android:id="@+id/privacyCheckbox"
+        android:layout_width="wrap_content"
+        android:textSize="16dp"
+        android:layout_height="wrap_content"
+        android:text="I agree to the Privacy Policy and Disclaimer"
+        android:paddingTop="15dp"/>
+
+
+
+</LinearLayout>

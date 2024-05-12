@@ -21,10 +21,10 @@
         android:theme="@style/Theme.Android"
         tools:targetApi="31">
         <activity
-            android:name=".PasswordStrength"
+            android:name=".Privacy"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".PasswordStrength"
             android:exported="false" />
         <activity
             android:name=".ViewWifiPort"

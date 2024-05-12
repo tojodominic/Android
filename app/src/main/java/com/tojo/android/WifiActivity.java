@@ -66,10 +66,10 @@ public class WifiActivity extends AppCompatActivity {
 
         ipList = new ArrayList<>();
 
-        if (!Python.isStarted()){
-            Python.start(new AndroidPlatform(this));
-        }
-        Python py = Python.getInstance();
+//        if (!Python.isStarted()){
+//            Python.start(new AndroidPlatform(this));
+//        }
+//        Python py = Python.getInstance();
 
 
         ipLists = new ArrayList<>();
