@@ -46,7 +46,7 @@
             app:boxStrokeColor="#465FEE"
             android:textColorHint="#324CE0"
             app:helperTextEnabled="true"
-            app:helperText="Domain Name or Host IP"
+            app:helperText="Domain Name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -60,8 +60,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="100dp">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/normalScanHomeUI"
@@ -113,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:text="  Password Strength Analyzer"
-                app:icon="@drawable/scn"
+                app:icon="@drawable/password12"
                 app:iconSize="25dp"
                 android:textColor="#0C84E4"
                 style="?attr/materialButtonOutlinedStyle" />

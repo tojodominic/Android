@@ -52,7 +52,7 @@
                 app:boxStrokeColor="#465FEE"
                 android:textColorHint="#324CE0"
                 app:helperTextEnabled="true"
-                app:helperText="Domain Name or Host IP"
+                app:helperText="Domain Name"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -66,17 +66,17 @@
 
             <Button
                 android:layout_width="0dp"
-                android:layout_weight="0.15"
+                android:layout_weight="0.3"
                 android:layout_height="wrap_content"
                 android:text="+"
+                android:textColor="#0C84E4"
                 android:id="@+id/addStagedHome"
                 style="?attr/materialButtonOutlinedStyle"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="100dp">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/stagedScanStagedHome"
