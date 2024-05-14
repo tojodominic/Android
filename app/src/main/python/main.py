@@ -5,6 +5,7 @@ import threading
 import whois
 from Wappalyzer import Wappalyzer, WebPage
 from DirectoryList import *
+import socket
 
 output = {}
 
@@ -20,6 +21,27 @@ def extractFe(userInput):
         return "https",base_url
     else:
         return "https",base_url
+
+
+def dns_lookup(domain):
+    op = []
+    try:
+        # Resolve domain name to IP address
+        ip_address = socket.gethostbyname(domain)
+        op.append(["IP Address : ",ip_address])
+        canonical_name = socket.gethostbyname_ex(domain)
+        op.append(["CNAME : ", canonical_name])
+        aliases = canonical_name[1]
+        if aliases:
+            op.append(["Aliases name : ", aliases])
+        ip_addresses = canonical_name[2]
+        if ip_addresses:
+            op.append(["IP Addresses : ", ip_addresses])
+        return op
+
+    except socket.gaierror as e:
+        return op
+
 
 
 def SubEnum(proto,domainName):
@@ -125,6 +147,8 @@ def main(userInput):
         subInnerDomain["domain"]=host[0]
         #storing the whois lookup...
         subInnerDomain["whois"]=whoisEnum(host[0])
+        #storing dns lookup
+        subInnerDomain["DNS"]=dns_lookup(host[0])
         #techology identifications...
         subInnerDomain["tech"]=techEnum(proto,host[0])
         #directory enumeration...

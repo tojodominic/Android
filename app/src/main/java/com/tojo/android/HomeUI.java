@@ -207,6 +207,8 @@ public class HomeUI extends AppCompatActivity {
                                 String subdomainName = innerdomainDet.get("domain").toString();
                                 //getting the status...
                                 String status = innerdomainDet.get("status").toString();
+                                //getting the dns
+                                String DNS = innerdomainDet.get("DNS").toString();
                                 //getting the allowed methods...
                                 String methods;
                                 try{
@@ -223,7 +225,7 @@ public class HomeUI extends AppCompatActivity {
                                 //adding data to subdomain object...
                                 subDomain.setSubDomainName(subdomainName);
                                 subDomain.setStatus(status);
-                                subDomain.setDNS("No-Data");
+                                subDomain.setDNS(DNS);
 
                                 subDomain.setTechnology(tech);
                                 subDomain.setMethods(methods);
