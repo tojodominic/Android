@@ -53,6 +53,8 @@ public class WifiActivity extends AppCompatActivity {
         }
     };
 
+    private WifiInfoHelper wifiInfoHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +63,12 @@ public class WifiActivity extends AppCompatActivity {
         txtStatus = (TextView) findViewById(R.id.statusWifiActivity);
         txtOp = (TextView) findViewById(R.id.opWifiActivity);
         btnScan = (Button) findViewById(R.id.btnScanWifiWifiActivity);
+
+        wifiInfoHelper = new WifiInfoHelper(this);
+
+
+        String wifiInfo = wifiInfoHelper.getWifiInfo();
+        txtOp.setText(wifiInfo);
 
         recyclerView=findViewById(R.id.recyclerviewWifi);
 
